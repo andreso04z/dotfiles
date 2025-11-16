@@ -48,3 +48,13 @@ path=(
 )
 
 export path
+
+# ------------------------------------------------------------------------------
+# WSL-specific
+# ------------------------------------------------------------------------------
+# Add VS Code to PATH if running on WSL
+if grep -qi microsoft /proc/version 2>/dev/null; then
+	export PATH="$PATH:/mnt/c/Users/Andrés Obón Zárate/AppData/Local/Programs/Microsoft VS Code/bin"
+fi
+export PATH="$PATH:/mnt/c/Users/Andrés/AppData/Local/Programs/Microsoft VS Code/bin"
+export PATH="$PATH:/mnt/c/Users/Andrés Obón Zárate/AppData/Local/Programs/Microsoft VS Code/bin"
